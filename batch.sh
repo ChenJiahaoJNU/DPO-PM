@@ -8,7 +8,7 @@ TRAINER_FILES=(
     # "trainers_Call_DPO.py"
 )
 
-
+# https://huggingface.co
 DATASET_PATHS=(
     "RLHFlow/HH-RLHF-Helpful-standard"
     "dikw/hh_rlhf_cn"
@@ -95,3 +95,4 @@ echo -e "\n========================================"
 echo "$LOG_DIR"
 
 echo "========================================"
+
