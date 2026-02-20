@@ -1,6 +1,5 @@
+#Using Guide
 
-
-# .condarc 
 vim /root/.condarc
 
 envs_dirs:
@@ -23,4 +22,5 @@ pip install ./flash_attn-2.1.1+cu121torch2.1cxx11abiFALSE-cp310-cp310-linux_x86_
 
 
 ./batch.sh
+
 
