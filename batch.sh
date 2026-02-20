@@ -10,15 +10,10 @@ TRAINER_FILES=(
 
 
 DATASET_PATHS=(
-    # "/root/autodl-fs/2025autumn/HF_Datasets/HH1"
-    # "/root/autodl-fs/2025autumn/HF_Datasets/HH2"
-    # "/root/autodl-fs/2025autumn/HF_Datasets/HH3"
-    # "/root/autodl-fs/2025autumn/HF_Datasets/HH4"
-    # "/root/autodl-fs/2025autumn/HF_Datasets/HH5"
-    "/root/autodl-fs/2025autumn/HF_Datasets/HH6"
-    # "/root/autodl-fs/2025autumn/HF_Datasets/HH7"
-    # "/root/autodl-fs/2025autumn/HF_Datasets/HH8"
-    # "/root/autodl-fs/2025autumn/HF_Datasets/HH9"
+    "RLHFlow/HH-RLHF-Helpful-standard"
+    "dikw/hh_rlhf_cn"
+    "Fizzarolli/hh-rlhf-helpful-only"
+
 
 )
 
@@ -27,7 +22,7 @@ mkdir -p "$LOG_DIR"
 
 modify_dataset_path() {
     local dataset_path="$1"
-    local datasets_file="/root/autodl-fs/2025autumn/Leaning/direct-preference-optimization-main/preference_datasets.py"
+    local datasets_file="./preference_datasets.py"
     
     cp "$datasets_file" "${datasets_file}.backup"
     
@@ -35,7 +30,7 @@ modify_dataset_path() {
 
 }
 restore_dataset_file() {
-    local datasets_file="/root/autodl-fs/2025autumn/Leaning/direct-preference-optimization-main/preference_datasets.py"
+    local datasets_file="./direct-preference-optimization-main/preference_datasets.py"
     
     if [ -f "${datasets_file}.backup" ]; then
         cp "${datasets_file}.backup" "$datasets_file"
@@ -98,4 +93,5 @@ done
 
 echo -e "\n========================================"
 echo "$LOG_DIR"
+
 echo "========================================"
