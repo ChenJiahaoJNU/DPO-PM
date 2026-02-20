@@ -1,9 +1,9 @@
-#Using Guide
+# Using Guide
 
 vim /root/.condarc
 
 envs_dirs:
-  - /root/autodl-tmp/conda
+/root/autodl-tmp/conda
 
 conda create -n AUT python=3.10.14 -y
 
@@ -22,5 +22,6 @@ pip install ./flash_attn-2.1.1+cu121torch2.1cxx11abiFALSE-cp310-cp310-linux_x86_
 
 
 ./batch.sh
+
 
 
